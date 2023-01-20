@@ -10,7 +10,7 @@
 	p{font-size:48px;}
 	p{font-family:"楷体";}
 	</style>
-    <title>跨年快乐</title>
+    <title>小宝，春节快乐</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -84,7 +84,7 @@
         </div>
         <div class="stage-container remove">
             <div class="page_two hide">
-                <div id="text" style="display:none;"><p>倒计时<br><br>还有<span id="time"></span><br><span id="text1"></span><br>祝小宝<br>新年快乐<br>早日找到女朋友<br>天天开心<br>永远战斗力爆表！<br><br>彩蛋:点击屏幕任意地方即可放烟花<br><br><br><span id="copyright"></span></p></div>
+                <div id="text" style="display:none;"><p>倒计时<br><br>还有<span id="time"></span><br><span id="text1"></span><br>小宝<br>春节快乐<br>癸卯兔年<br>万事皆胜意<br>欢愉皆可期<br><br>彩蛋:点击屏幕任意地方即可放烟花<br><br><br><span id="copyright"></span></p></div>
                 <div class="type_words" id="contents" style="font-size:1.15rem;line-height:1.5rem;"></div>
             </div>
             <div class="canvas-container">
@@ -200,7 +200,7 @@
         }
 
         function start() {
-            let str = $("#text").html(); //"于我而言，你是最好且是唯一"
+            let str = $("#text").html(); //"于我而言，你是最好且唯一。 "
             let str_ = ''
             let i = 0
             let content = document.getElementById('contents')
@@ -235,14 +235,14 @@
     var years = days * 365
     var today = new Date()
     var todayYear = today.getFullYear()
-    var newYear=todayYear+1
+    var newYear=todayYear
     var lastYear=todayYear-1
     var todayMonth = today.getMonth() + 1
     var todayDate = today.getDate()
     var todayHour = today.getHours()
     var todayMinute = today.getMinutes()
     var todaySecond = today.getSeconds()
-    var t1 = Date.UTC(newYear, 1, 1, 0, 00, 00)
+    var t1 = Date.UTC(newYear, 1, 22, 0, 00, 00)
     var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
     var diff = t1 - t2
     var diff2 = t2-t1
@@ -258,9 +258,9 @@
     var diff2Minutes = Math.floor((diff2 - (diff2Years * 365 + diff2Days) * days - diff2Hours * hours) / minutes)
     var diff2Seconds = Math.floor((diff2 - (diff2Years * 365 + diff2Days) * days - diff2Hours * hours - diff2Minutes *
         minutes) / seconds)
-     if(todayMonth==1){if(todayDate==1){document.getElementById("text1").innerHTML =  "现在是1月1日,祝你"+todayYear+"新年快乐！"}}
-     else{document.getElementById("text1").innerHTML =  "提前祝你"+newYear+"新年快乐"}
-     document.getElementById("time").innerHTML =  diffDays + "天" + diffHours + "小时" + diffMinutes + "分钟" + diffSeconds + "秒"+newYear
+     if(todayMonth==1){if(todayDate==22){document.getElementById("text1").innerHTML =  "现在是1月"+todayDate+"日,祝你"+todayYear+"兔年快乐！"}}
+     else{document.getElementById("text1").innerHTML =  "提前祝你"+newYear+"兔年快乐"}
+     document.getElementById("time").innerHTML =  diffDays + "天" + diffHours + "小时" + diffMinutes + "分钟" + diffSeconds + "秒"+"到达"+newYear+"癸卯兔年"
 }
 time()
 </script>
